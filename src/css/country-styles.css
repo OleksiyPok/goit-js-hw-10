@@ -1,4 +1,5 @@
-.country-list {
+.country-list,
+.country-info__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -11,7 +12,21 @@
 
 .country-list__name {
   margin-left: 10px;
-  /* font-weight: 700; */
-  /* position: absolute; */
-  /* left: 100px; */
+}
+
+.country-info__title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.country-info__name {
+  font-size: 30px;
+}
+
+.country-info__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
