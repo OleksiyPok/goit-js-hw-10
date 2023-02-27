@@ -1,14 +1,11 @@
-const URL = 'https://restcountries.com/';
-// const OPTIONS = ;
+const BASE_URL = 'https://restcountries.com/v3.1/name/';
+const CONF = ['name', 'capital', 'population', 'flags', 'languages'];
 
-const fetchCountries = '777';
-
-export function fetchCountries() {
-  const responce = '777';
+function fetchCountries(countryName) {
+  const QUERY = `?fields=${CONF.join(',')}`;
+  return fetch(BASE_URL + countryName + QUERY).then(responce => {
+    return responce.json();
+  });
 }
 
-// name.official - повна назва країни
-// capital - столиця
-// population - населення
-// flags.svg - посилання на зображення прапора
-// languages - масив мов
+export { fetchCountries };
